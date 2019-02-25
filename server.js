@@ -11,7 +11,7 @@ const register=require('./controllers/register')
 const db =knex({
   client: 'pg',              //DB to use , db
   connection: { 
-    host : '127.0.0.1',       //local host IP
+    host : 'postgresql-curved-19820',       //local host IP
     user : 'chang',
     password : '123',         //chang password = 123 ALTER USER chang PASSWORD '123';
     database : 'smart-brain'
