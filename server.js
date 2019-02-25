@@ -11,7 +11,7 @@ const register=require('./controllers/register')
 const db =knex({
   client: 'pg',              //DB to use , db
   connection: { 
-    host : process.env.DATABSE_URL,       //local host IP
+    connectionString : process.env.DATABSE_URL,       //local host IP
     ssl;true
   }
 });
