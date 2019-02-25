@@ -4,8 +4,8 @@ const bcrypt = require('bcrypt-nodejs');
 const cors=require('cors');
 const app=express();
 const knex=require('knex')
-const profile=require('./controllers/profile.js')
-const image=require('./controllers/image.js')
+const profile=require('./controllers/profile')
+const image=require('./controllers/image')
 const signIn=require('./controllers/signIn')
 const register=require('./controllers/register')
 const db =knex({
@@ -36,7 +36,7 @@ app.post('/imageurl',(req,res)=>{image.handleApiCall(req,res)});
 
 
 
-app.listen(3000,()=>{
-	console.log('app is running on port 3000');
+app.listen(process.env.PORT||3000,()=>{
+	console.log(`app is running on port ${process.env.PORT}`);
 })
 
