@@ -12,7 +12,7 @@ const db =knex({
   client: 'pg',              //DB to use , db
   connection: { 
     connectionString : process.env.DATABSE_URL,       //local host IP
-    ssl;true
+    ssl:true
   }
 });
 
